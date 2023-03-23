@@ -1,11 +1,14 @@
 {
   "index.qmd": {
-    "index.html": "829c3c98"
+    "index.html": "927ce02e"
   },
   "about.qmd": {
-    "about.html": "42529bed"
+    "about.html": "544e3152"
   },
   "index2.qmd": {
-    "index2.html": "ffe49d7a"
+    "index2.html": "f61cffb0"
+  },
+  "tabela-deflatores.md": {
+    "tabela-deflatores.html": "a86b7404"
   }
 }

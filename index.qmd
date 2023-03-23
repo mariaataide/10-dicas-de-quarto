@@ -149,4 +149,6 @@ quarto install extension quarto-ext/fontawesome
 
 Esse código pode ser encontrado no [GitHub](https://github.com/NetLogo/R-Extension/blob/hexy/INSTALLING.md).
 
-{{< include tabela_html_css.html >}}
+{{< include tabela-deflatores.md >}}
+
+Veja a @tbl-deflatores

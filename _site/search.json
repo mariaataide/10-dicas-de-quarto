@@ -67,7 +67,7 @@
     "href": "index.html#fonte-awesome",
     "title": "About",
     "section": "10 Fonte Awesome",
-    "text": "10 Fonte Awesome\nExiste uma extensão para colocar o Fonte Awesome dentro do Quarto. Para instalar, usar o seguinte código no terminal :\nquarto install extension quarto-ext/fontawesome\nEsse código pode ser encontrado no GitHub.\n\n\n\n\n\n\nDeflator\n\n\nDescriC’C#o\n\n\n\n\n\n\nCO1\n\n\nDeflator, a pre?os m?dios do pr?prio ano, utilizado para vari?veis de rendimento habitual.\n\n\n\n\nCO1e\n\n\nDeflator, a pre?os m?dios do pr?prio ano, utilizado para vari?veis de rendimento efetivo.\n\n\n\n\nCO2\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para vari?veis de rendimento habitual.\n\n\n\n\nCO2e\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para vari?veis de rendimento efetivo.\n\n\n\n\nCO3\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para a linha de U$ 1,90 do indicador 1.1.1 dos Objetivos de Desenvolvimento Sustent?vel (ODS).\n\n\n\n\n\n?"
+    "text": "10 Fonte Awesome\nExiste uma extensão para colocar o Fonte Awesome dentro do Quarto. Para instalar, usar o seguinte código no terminal :\nquarto install extension quarto-ext/fontawesome\nEsse código pode ser encontrado no GitHub.\n\n\nTabela 1: Deflatores da PNAD Contínual Anual\n\n\n\n\n\n\nDeflator\nDescrição\n\n\n\n\nCO1\nDeflator, a preços médios do próprio ano, utilizado para variáveis de rendimento habitual.\n\n\nCO1e\nDeflator, a preços médios do próprio ano, utilizado para variáveis de rendimento efetivo.\n\n\nCO2\nDeflator, a preços médios do último ano, utilizado para variáveis de rendimento habitual.\n\n\nCO2e\nDeflator, a preços médios do último ano, utilizado para variáveis de rendimento efetivo.\n\n\nCO3\nDeflator, a preços médios do último ano, utilizado para a linha de U$ 1,90 do indicador 1.1.1 dos Objetivos de Desenvolvimento Sustentável (ODS).\n\n\n\n\nVeja a Tabela 1"
   },
   {
     "objectID": "about.html",
@@ -144,6 +144,13 @@
     "href": "index2.html#fonte-awesome",
     "title": "About",
     "section": "10 Fonte Awesome",
-    "text": "10 Fonte Awesome\nExiste uma extensão para colocar o Fonte Awesome dentro do Quarto. Para instalar, usar o seguinte código no terminal :\nquarto install extension quarto-ext/fontawesome\nEsse código pode ser encontrado no GitHub.\n\n\n\n\n\n\nDeflator\n\n\nDescriC’C#o\n\n\n\n\n\n\nCO1\n\n\nDeflator, a pre?os m?dios do pr?prio ano, utilizado para vari?veis de rendimento habitual.\n\n\n\n\nCO1e\n\n\nDeflator, a pre?os m?dios do pr?prio ano, utilizado para vari?veis de rendimento efetivo.\n\n\n\n\nCO2\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para vari?veis de rendimento habitual.\n\n\n\n\nCO2e\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para vari?veis de rendimento efetivo.\n\n\n\n\nCO3\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para a linha de U$ 1,90 do indicador 1.1.1 dos Objetivos de Desenvolvimento Sustent?vel (ODS).\n\n\n\n\n\n?"
+    "text": "10 Fonte Awesome\nExiste uma extensão para colocar o Fonte Awesome dentro do Quarto. Para instalar, usar o seguinte código no terminal :\nquarto install extension quarto-ext/fontawesome\nEsse código pode ser encontrado no GitHub.\n\n\nTabela 1: Deflatores da PNAD Contínual Anual\n\n\n\n\n\n\nDeflator\nDescrição\n\n\n\n\nCO1\nDeflator, a preços médios do próprio ano, utilizado para variáveis de rendimento habitual.\n\n\nCO1e\nDeflator, a preços médios do próprio ano, utilizado para variáveis de rendimento efetivo.\n\n\nCO2\nDeflator, a preços médios do último ano, utilizado para variáveis de rendimento habitual.\n\n\nCO2e\nDeflator, a preços médios do último ano, utilizado para variáveis de rendimento efetivo.\n\n\nCO3\nDeflator, a preços médios do último ano, utilizado para a linha de U$ 1,90 do indicador 1.1.1 dos Objetivos de Desenvolvimento Sustentável (ODS).\n\n\n\n\nVeja a Tabela 1"
+  },
+  {
+    "objectID": "tabela-deflatores.html",
+    "href": "tabela-deflatores.html",
+    "title": "Dicas",
+    "section": "",
+    "text": "Tabela 1: Deflatores da PNAD Contínual Anual\n\n\n\n\n\n\nDeflator\nDescrição\n\n\n\n\nCO1\nDeflator, a preços médios do próprio ano, utilizado para variáveis de rendimento habitual.\n\n\nCO1e\nDeflator, a preços médios do próprio ano, utilizado para variáveis de rendimento efetivo.\n\n\nCO2\nDeflator, a preços médios do último ano, utilizado para variáveis de rendimento habitual.\n\n\nCO2e\nDeflator, a preços médios do último ano, utilizado para variáveis de rendimento efetivo.\n\n\nCO3\nDeflator, a preços médios do último ano, utilizado para a linha de U$ 1,90 do indicador 1.1.1 dos Objetivos de Desenvolvimento Sustentável (ODS)."
   }
 ]
