@@ -1,0 +1,11 @@
+/* css styles */
+
+.navbar-dark {
+  background-color: #254686;
+}
+
+thead { 
+  background-color: #254686;
+  font-weight: bold;
+  font-size: 24px;
+}

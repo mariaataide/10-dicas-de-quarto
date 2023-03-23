@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "#install.packages(\"here\")\n\n\nhere::here() ## mostra o diretório raiz\n\n[1] \"G:/Meu Drive/R/10-dicas-de-quarto\"\n\n\n\nhere::here(\"styles.css\") ## une o diretório raiz ao diretório relativo\n\n[1] \"G:/Meu Drive/R/10-dicas-de-quarto/styles.css\""
+  },
+  {
+    "objectID": "index.html#bônus-trocar-idioma",
+    "href": "index.html#bônus-trocar-idioma",
+    "title": "About",
+    "section": "02. Bônus! Trocar idioma",
+    "text": "02. Bônus! Trocar idioma\nNo _quarto.yml\nlang: pt-br"
+  },
+  {
+    "objectID": "index.html#chunks",
+    "href": "index.html#chunks",
+    "title": "About",
+    "section": "03. Chunks #|",
+    "text": "03. Chunks #|\n#| = hashpipe\n\nColocando imagem no formato antigo do RMarkdown :\n\nArrastar para colar a imagem\n\n\nUsando knitr::include_graphics()\n\n\n\n\n\nUm gatinho bonitinho\n\n\n\n\nCom hash pipe:\n\n\n#|out-width: \"50%\"\n#|fig-align: \"center\"\n#|echo: false\n#|fig-cap: \"Um gatinho bonitinho\"\nknitr::include_graphics(here::here(\"gato.jpg\"))\n\n\n\n\n\nUsando função knitr::convert_chunk_header()\n\nEssa função converte os cabeçalhos do chunk do formato antigo para o novo.\n\nknitr::convert_chunk_header(\"index.qmd\", \"index2.qmd\")"
+  },
+  {
+    "objectID": "index.html#citações-usando-o-visual-editor",
+    "href": "index.html#citações-usando-o-visual-editor",
+    "title": "About",
+    "section": "04. Citações usando o Visual Editor",
+    "text": "04. Citações usando o Visual Editor\n\nUsar barra para inserir as citações.\n\nSegundo (IBGE 2015), o deflacionamento …. @ procura direto na lista\n\nknitr::write_bib : referenciando pacotes\n\n\nknitr::write_bib(\"here\", \"pacotes.bib\")"
+  },
+  {
+    "objectID": "index.html#include-ou-child",
+    "href": "index.html#include-ou-child",
+    "title": "About",
+    "section": "05. include ou child",
+    "text": "05. include ou child\nPodemos chamar dentro do no arquivo .qmd chamar um arquivo .qmd externo.\nAbout this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#usando-parâmetros",
+    "href": "index.html#usando-parâmetros",
+    "title": "About",
+    "section": "06. Usando parâmetros",
+    "text": "06. Usando parâmetros\n\nparams$data\n\n[1] \"2023-03-22\""
+  },
+  {
+    "objectID": "index.html#inline-code-formatação-de-código",
+    "href": "index.html#inline-code-formatação-de-código",
+    "title": "About",
+    "section": "07. Inline code + formatação de código",
+    "text": "07. Inline code + formatação de código\nA base dos pinguins tem 344.Os pinguins estudados na base são Adelie, Gentoo e Chinstrap.\n\nFazendo a mesma coisa usando chunk:\n\n\n#|echo:false \nespecies <- \n  palmerpenguins::penguins |> \n  dplyr::pull(species) |> # extrai uma única coluna\n  unique() |> \n  knitr::combine_words(and = \" e \", oxford_comma = FALSE)\n\nA base dos pinguins tem 344 linhas. Os pinguins estudados na base são Adelie, Gentoo e Chinstrap.\n?kintr::combine_words(): O argumento orxford_comma = “,” antes do “e”\n?stringr::str_flatten()\n\nFormatação de número\n\n\npi_bonitinho <- round(pi, digits = 2)\n\npi_reais <- scales::dollar(pi, prefix = \"R$ \", decimal.mark = \",\", big.mark = \".\")\n\nO Pi é mais ou menos 3.14 e isso é Pi reais: R$ 3,14."
+  },
+  {
+    "objectID": "index.html#personalização-de-templates",
+    "href": "index.html#personalização-de-templates",
+    "title": "About",
+    "section": "08 Personalização de templates",
+    "text": "08 Personalização de templates\nAdicionado no arquivo style.css"
+  },
+  {
+    "objectID": "index.html#mermaid",
+    "href": "index.html#mermaid",
+    "title": "About",
+    "section": "09 Mermaid",
+    "text": "09 Mermaid\nÉ uma forma de especificar diagramas.\nchunk criado com / no visual\n1º) definir o fomarto e a direção\nflowchart - diagrama de fluxo\nLR - Da esquerda para a direita\nPodemos definir o nome e o formado do nó\n\n\n\n\nflowchart LR\n  A[Hard edge] --> B(Round edge)\n  B --> C{Decision}\n  C --> D[Result one]\n  C --> E[Result two]"
+  },
+  {
+    "objectID": "index.html#fonte-awesome",
+    "href": "index.html#fonte-awesome",
+    "title": "About",
+    "section": "10 Fonte Awesome",
+    "text": "10 Fonte Awesome\nExiste uma extensão para colocar o Fonte Awesome dentro do Quarto. Para instalar, usar o seguinte código no terminal :\nquarto install extension quarto-ext/fontawesome\nEsse código pode ser encontrado no GitHub.\n\n\n\n\n\n\nDeflator\n\n\nDescriC’C#o\n\n\n\n\n\n\nCO1\n\n\nDeflator, a pre?os m?dios do pr?prio ano, utilizado para vari?veis de rendimento habitual.\n\n\n\n\nCO1e\n\n\nDeflator, a pre?os m?dios do pr?prio ano, utilizado para vari?veis de rendimento efetivo.\n\n\n\n\nCO2\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para vari?veis de rendimento habitual.\n\n\n\n\nCO2e\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para vari?veis de rendimento efetivo.\n\n\n\n\nCO3\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para a linha de U$ 1,90 do indicador 1.1.1 dos Objetivos de Desenvolvimento Sustent?vel (ODS).\n\n\n\n\n\n?"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index2.html",
+    "href": "index2.html",
+    "title": "About",
+    "section": "",
+    "text": "#install.packages(\"here\")\n\n\nhere::here() ## mostra o diretório raiz\n\n[1] \"G:/Meu Drive/R/10-dicas-de-quarto\"\n\n\n\nhere::here(\"styles.css\") ## une o diretório raiz ao diretório relativo\n\n[1] \"G:/Meu Drive/R/10-dicas-de-quarto/styles.css\""
+  },
+  {
+    "objectID": "index2.html#bônus-trocar-idioma",
+    "href": "index2.html#bônus-trocar-idioma",
+    "title": "About",
+    "section": "02. Bônus! Trocar idioma",
+    "text": "02. Bônus! Trocar idioma\nNo _quarto.yml\nlang: pt-br"
+  },
+  {
+    "objectID": "index2.html#chunks",
+    "href": "index2.html#chunks",
+    "title": "About",
+    "section": "03. Chunks #|",
+    "text": "03. Chunks #|\n#| = hashpipe\n\nColocando imagem no formato antigo do RMarkdown :\n\nArrastar para colar a imagem\n\n\nUsando knitr::include_graphics()\n\n\n\n\n\nUm gatinho bonitinho\n\n\n\n\nCom hash pipe:\n\n\n#|out-width: \"50%\"\n#|fig-align: \"center\"\n#|echo: false\n#|fig-cap: \"Um gatinho bonitinho\"\nknitr::include_graphics(here::here(\"gato.jpg\"))\n\n\n\n\n\nUsando função knitr::convert_chunk_header()\n\nEssa função converte os cabeçalhos do chunk do formato antigo para o novo.\n\nknitr::convert_chunk_header(\"index.qmd\", \"index2.qmd\")"
+  },
+  {
+    "objectID": "index2.html#citações-usando-o-visual-editor",
+    "href": "index2.html#citações-usando-o-visual-editor",
+    "title": "About",
+    "section": "04. Citações usando o Visual Editor",
+    "text": "04. Citações usando o Visual Editor\n\nUsar barra para inserir as citações.\n\nSegundo (IBGE 2015), o deflacionamento …. @ procura direto na lista\n\nknitr::write_bib : referenciando pacotes\n\n\nknitr::write_bib(\"here\", \"pacotes.bib\")"
+  },
+  {
+    "objectID": "index2.html#include-ou-child",
+    "href": "index2.html#include-ou-child",
+    "title": "About",
+    "section": "05. include ou child",
+    "text": "05. include ou child\nPodemos chamar dentro do no arquivo .qmd chamar um arquivo .qmd externo.\nAbout this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index2.html#usando-parâmetros",
+    "href": "index2.html#usando-parâmetros",
+    "title": "About",
+    "section": "06. Usando parâmetros",
+    "text": "06. Usando parâmetros\n\nparams$data\n\n[1] \"2023-03-22\""
+  },
+  {
+    "objectID": "index2.html#inline-code-formatação-de-código",
+    "href": "index2.html#inline-code-formatação-de-código",
+    "title": "About",
+    "section": "07. Inline code + formatação de código",
+    "text": "07. Inline code + formatação de código\nA base dos pinguins tem 344.Os pinguins estudados na base são Adelie, Gentoo e Chinstrap.\n\nFazendo a mesma coisa usando chunk:\n\n\n#|echo:false \nespecies <- \n  palmerpenguins::penguins |> \n  dplyr::pull(species) |> # extrai uma única coluna\n  unique() |> \n  knitr::combine_words(and = \" e \", oxford_comma = FALSE)\n\nA base dos pinguins tem 344 linhas. Os pinguins estudados na base são Adelie, Gentoo e Chinstrap.\n?kintr::combine_words(): O argumento orxford_comma = “,” antes do “e”\n?stringr::str_flatten()\n\nFormatação de número\n\n\npi_bonitinho <- round(pi, digits = 2)\n\npi_reais <- scales::dollar(pi, prefix = \"R$ \", decimal.mark = \",\", big.mark = \".\")\n\nO Pi é mais ou menos 3.14 e isso é Pi reais: R$ 3,14."
+  },
+  {
+    "objectID": "index2.html#personalização-de-templates",
+    "href": "index2.html#personalização-de-templates",
+    "title": "About",
+    "section": "08 Personalização de templates",
+    "text": "08 Personalização de templates\nAdicionado no arquivo style.css"
+  },
+  {
+    "objectID": "index2.html#mermaid",
+    "href": "index2.html#mermaid",
+    "title": "About",
+    "section": "09 Mermaid",
+    "text": "09 Mermaid\nÉ uma forma de especificar diagramas.\nchunk criado com / no visual\n1º) definir o fomarto e a direção\nflowchart - diagrama de fluxo\nLR - Da esquerda para a direita\nPodemos definir o nome e o formado do nó\n\n\n\n\nflowchart LR\n  A[Hard edge] --> B(Round edge)\n  B --> C{Decision}\n  C --> D[Result one]\n  C --> E[Result two]"
+  },
+  {
+    "objectID": "index2.html#fonte-awesome",
+    "href": "index2.html#fonte-awesome",
+    "title": "About",
+    "section": "10 Fonte Awesome",
+    "text": "10 Fonte Awesome\nExiste uma extensão para colocar o Fonte Awesome dentro do Quarto. Para instalar, usar o seguinte código no terminal :\nquarto install extension quarto-ext/fontawesome\nEsse código pode ser encontrado no GitHub.\n\n\n\n\n\n\nDeflator\n\n\nDescriC’C#o\n\n\n\n\n\n\nCO1\n\n\nDeflator, a pre?os m?dios do pr?prio ano, utilizado para vari?veis de rendimento habitual.\n\n\n\n\nCO1e\n\n\nDeflator, a pre?os m?dios do pr?prio ano, utilizado para vari?veis de rendimento efetivo.\n\n\n\n\nCO2\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para vari?veis de rendimento habitual.\n\n\n\n\nCO2e\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para vari?veis de rendimento efetivo.\n\n\n\n\nCO3\n\n\nDeflator, a pre?os m?dios do ?ltimo ano, utilizado para a linha de U$ 1,90 do indicador 1.1.1 dos Objetivos de Desenvolvimento Sustent?vel (ODS).\n\n\n\n\n\n?"
+  }
+]

@@ -1,0 +1,152 @@
+---
+title: "10 Dicas de Quarto da Curso-R"
+bibliography: [references.bib, pacotes.bib]
+params:
+  data: "2023-03-22"
+---
+
+## 01. Caminhos com o `here()`
+
+```{r}
+#install.packages("here")
+```
+
+```{r}
+here::here() ## mostra o diretório raiz
+```
+
+```{r}
+here::here("styles.css") ## une o diretório raiz ao diretório relativo
+```
+
+## 02. Bônus! Trocar idioma
+
+No \_quarto.yml
+
+lang: pt-br
+
+## 03. Chunks `#|`
+
+#\| = hashpipe
+
+-   Colocando imagem no formato antigo do `RMarkdown` :
+
+Arrastar para colar a imagem
+
+![](gato.jpg)
+
+-   Usando `knitr::include_graphics()`
+
+    ```{r, out.width="50%", fig.align='center', echo=FALSE, fig.cap="Um gatinho bonitinho"}
+    knitr::include_graphics(here::here("gato.jpg"))
+    ```
+
+-   Com hash pipe:
+
+```{r}
+#|out-width: "50%"
+#|fig-align: "center"
+#|echo: false
+#|fig-cap: "Um gatinho bonitinho"
+knitr::include_graphics(here::here("gato.jpg"))
+```
+
+-   Usando função `knitr::convert_chunk_header()`
+
+Essa função converte os cabeçalhos do chunk do formato antigo para o novo.
+
+```{r}
+knitr::convert_chunk_header("index.qmd", "index2.qmd")
+```
+
+## 04. Citações usando o Visual Editor
+
+-   Usar barra para inserir as citações.
+
+Segundo [@ibge2015], o deflacionamento .... \@ procura direto na lista
+
+-   `knitr::write_bib` : referenciando pacotes
+
+```{r}
+knitr::write_bib("here", "pacotes.bib")
+```
+
+## 05. `include` ou `child`
+
+Podemos chamar dentro do no arquivo .qmd chamar um arquivo .qmd externo.
+
+{{< include about.qmd >}}
+
+## 06. Usando parâmetros
+
+```{r}
+params$data
+```
+
+## 07. Inline code + formatação de código
+
+A base dos pinguins tem `r nrow(palmerpenguins::penguins)`.Os pinguins estudados na base são `r unique(palmerpenguins::penguins$species) |> knitr::combine_words(and = " e ", oxford_comma = FALSE)`.
+
+-   Fazendo a mesma coisa usando chunk:
+
+```{r}
+#|echo:false 
+especies <- 
+  palmerpenguins::penguins |> 
+  dplyr::pull(species) |> # extrai uma única coluna
+  unique() |> 
+  knitr::combine_words(and = " e ", oxford_comma = FALSE)
+```
+
+A base dos pinguins tem `r nrow(palmerpenguins::penguins)` linhas. Os pinguins estudados na base são `r especies`.
+
+?`kintr::combine_words()`: O argumento orxford_comma = "," antes do "e"
+
+?`stringr::str_flatten()`
+
+-   Formatação de número
+
+```{r}
+pi_bonitinho <- round(pi, digits = 2)
+
+pi_reais <- scales::dollar(pi, prefix = "R$ ", decimal.mark = ",", big.mark = ".")
+```
+
+O Pi é mais ou menos `r pi_bonitinho` e isso é Pi reais: `r pi_reais`.
+
+## 08 Personalização de templates
+
+Adicionado no arquivo style.css
+
+## 09 Mermaid
+
+É uma forma de especificar diagramas.
+
+chunk criado com / no visual
+
+1º) definir o fomarto e a direção
+
+flowchart - diagrama de fluxo
+
+LR - Da esquerda para a direita
+
+Podemos definir o nome e o formado do nó
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+
+```
+
+## 10 Fonte Awesome
+
+Existe uma extensão para colocar o Fonte Awesome dentro do Quarto. Para instalar, usar o seguinte código no `terminal` :
+
+quarto install extension quarto-ext/fontawesome
+
+Esse código pode ser encontrado no [GitHub](https://github.com/NetLogo/R-Extension/blob/hexy/INSTALLING.md).
+
+{{< include tabela_html_css.html >}}
